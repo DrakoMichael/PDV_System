@@ -11,6 +11,8 @@ public class applicationProperties {
     private String password;
 
     public applicationProperties() {
+
+
         try (JsonReader jsonReader = Json.createReader(new FileReader("src/main/java/com/drakomichael/resources/applicationProperties.json"))) {
             JsonObject jsonObject = jsonReader.readObject();
             this.url = jsonObject.getString("url");

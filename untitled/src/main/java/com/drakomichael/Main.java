@@ -2,6 +2,7 @@ package com.drakomichael;
 
 import com.drakomichael.resources.applicationProperties;
 import java.sql.*;
+import com.drakomichael.repository.JdbcInstance;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,6 +11,8 @@ public class Main {
             try {
                 Connection connection = DriverManager.getConnection(jbdc.url(), jbdc.username(), jbdc.password());
                 Statement statement = connection.createStatement();
+
+                JdbcInstance.getInstance();
 
                 ResultSet resultSet = statement.executeQuery("SELECT * FROM STUDENTS");
 
