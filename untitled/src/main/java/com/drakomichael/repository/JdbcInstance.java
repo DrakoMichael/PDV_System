@@ -7,9 +7,8 @@ import com.drakomichael.resources.applicationProperties;
 
 public class JdbcInstance {
     private static DatabaseConnection instance;
-    private Connection connection;
+    private Connection connection = DriverManager.getConnection(jbdc.url(), jbdc.username(), jbdc.password());;
 
-    applicationProperties jbdc = new applicationProperties();
 
     private void DatabaseConnection() {
         try {

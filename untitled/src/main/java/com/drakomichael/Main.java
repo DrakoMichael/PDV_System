@@ -12,7 +12,7 @@ public class Main {
                 Connection connection = DriverManager.getConnection(jbdc.url(), jbdc.username(), jbdc.password());
                 Statement statement = connection.createStatement();
 
-                JdbcInstance.getInstance();
+                //JdbcInstance.getInstance();
 
                 ResultSet resultSet = statement.executeQuery("SELECT * FROM STUDENTS");
 
